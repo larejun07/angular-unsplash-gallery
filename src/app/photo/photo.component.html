@@ -1,11 +1,16 @@
 <div class="nav">
   <a class="nav_back" [routerLink]="['/']">&lt;&lt; Back to Gallery</a>
 </div>
-<div class="photo" *ngIf="photo$ | async as photo; else loading">
+<div class="photo" *ngIf="photo$ | async as photo; else loadingOrError">
   <div class="photo_image"><img [src]="photo.urls.regular" [alt]="photo.alt_description" /></div>
   <div class="photo_id">ID#: {{photo.id}}</div>
   <div class="photo_desc">Description: {{photo.description}}</div>
   <div class="photo_likes">Likes: {{photo.likes}}</div>
 </div>
-<ng-template #loading>Loading...</ng-template>
+<ng-template #loadingOrError>
+  <div *ngIf="photoErr$ | async; else loading">
+    Failed to get the photo information. Please try again later.
+  </div>
+  <ng-template #loading>Loading...</ng-template>
+</ng-template>
   
