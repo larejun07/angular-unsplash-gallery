@@ -1,0 +1,11 @@
+.nav {
+    margin-bottom: 10px;
+}
+
+.photo_image {
+    max-width: 500px;
+}
+
+.photo_image img {
+    width: 100%;
+}

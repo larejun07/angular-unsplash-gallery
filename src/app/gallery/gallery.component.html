@@ -1,0 +1,9 @@
+<div class="gallery" *ngIf="photos$ | async as photos; else loading">
+  <div class="photo" *ngFor="let photo of photos">
+    <a class="photo_thumb" [routerLink]="['/photo', photo.id]"><img [src]="photo.urls.thumb" [alt]="photo.alt_description" /></a>
+    <div class="photo_id">ID#: {{photo.id}}</div>
+    <div class="photo_desc">Description: {{photo.description}}</div>
+    <div class="photo_likes">Likes: {{photo.likes}}</div>
+  </div>
+</div>
+<ng-template #loading>Loading...</ng-template>

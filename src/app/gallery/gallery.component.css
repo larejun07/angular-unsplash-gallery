@@ -1,0 +1,13 @@
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.photo {
+  flex: 1;
+  padding: 5px;
+}
+
+.photo_thumb {
+  display: block;
+}
