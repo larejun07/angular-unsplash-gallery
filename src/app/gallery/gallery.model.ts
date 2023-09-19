@@ -14,5 +14,5 @@ export interface PhotoSizes {
   full: string;
   regular: string;
   small: string;
- thumb: string;
+  thumb: string;
 }
