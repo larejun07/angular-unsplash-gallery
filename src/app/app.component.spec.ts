@@ -24,6 +24,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-unsplash-gallery app is running!');
+    expect(compiled.querySelector('.app_title')?.textContent).toContain('angular-unsplash-gallery');
   });
 });
